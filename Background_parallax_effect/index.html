@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Parallax Effect on mouse move with Parallax.js</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="parallax.js"></script>
+</head>
+<body>
+    
+    <div class="container">
+        <ul id="scene">
+            <li class="layer" data-depth=".1">
+                <img src="img/text.png" alt="text">
+            </li>
+            <li class="layer" data-depth="1">
+                <img src="img/planet1.png" alt="planet1">
+            </li>
+            <li class="layer" data-depth="-1">
+                <img src="img/planet2.png" alt="planet2">
+            </li>
+            <li class="layer" data-depth="2">
+                <img src="img/astronaut.png" alt="astronaut">
+            </li>
+            <li class="layer" data-depth="0.5">
+                <img src="img/rocket.png" alt="rocket">
+            </li>
+        </ul>
+    </div>
+    
+    <script type="text/javascript">
+        var scene = document.getElementById('scene');
+        
+        var parallax = new Parallax(scene);
+    </script>
+</body>
+</html>
